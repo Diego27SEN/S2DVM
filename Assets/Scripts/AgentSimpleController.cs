@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using static UnityEngine.GraphicsBuffer;
 public class AgentSimpleController : MonoBehaviour
 {
     public Transform Target;
@@ -7,21 +8,24 @@ public class AgentSimpleController : MonoBehaviour
 
     void Start()
     {
-        agent = GetComponent<NavMeshAgent>();  
+        agent = GetComponent<NavMeshAgent>();
+        Target = GameObject.FindGameObjectWithTag("Ball").transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Target != null)
+        if(Target != null && agent.isOnNavMesh)
         {
             agent.SetDestination(Target.position);
+
+            agent.speed = Random.Range(3f, 6f);
+            agent.acceleration = Random.Range(5f, 10f);
+            agent.stoppingDistance = Random.Range(1f, 3f);
+            agent.avoidancePriority = Random.Range(0, 99);
         }
     }
-    public void HasPath()
-    {
-        print(agent.hasPath);
-    }
+    
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
@@ -35,5 +39,6 @@ public class AgentSimpleController : MonoBehaviour
             Gizmos.DrawLine(corners[i], corners[i + 1]);
             Gizmos.DrawSphere(corners[i], 0.2f);
         }
+
     }
 }
