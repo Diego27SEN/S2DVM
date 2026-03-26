@@ -23,6 +23,7 @@ public class EnemySimpleController : MonoBehaviour
             agentEnemy.acceleration = Random.Range(5f, 10f);
             agentEnemy.stoppingDistance = Random.Range(1f, 3f);
             agentEnemy.avoidancePriority = Random.Range(0, 99);
+            agentEnemy.angularSpeed = Random.Range(0, 120);
         }
     }
 
