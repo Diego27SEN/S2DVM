@@ -5380,7 +5380,7 @@ Transform:
   m_GameObject: {fileID: 690586968}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.91, y: 14.53, z: 0.07}
+  m_LocalPosition: {x: 5.91, y: 6.2, z: 18.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7037,7 +7037,7 @@ GameObject:
   - component: {fileID: 876493900}
   m_Layer: 0
   m_Name: Humanoid
-  m_TagString: Untagged
+  m_TagString: Humanoid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
