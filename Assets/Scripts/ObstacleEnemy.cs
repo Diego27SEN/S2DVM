@@ -6,9 +6,14 @@ public class ObstacleEnemy : MonoBehaviour
     public BoxCollider Collider;
 
 
-    public int ValorParaSubir = 5;
-    public int CantidadParaSubir;
+    public int ValorNecesarioParaSubir = 5;
+
+    public int CantidadASubir;
+
     public bool Subio;
+
+
+
 
 
     void Start()
@@ -32,13 +37,20 @@ public class ObstacleEnemy : MonoBehaviour
             Debug.Log(ValorRandom);
 
 
-            if (ValorRandom >= ValorParaSubir && Subio == false)
+
+
+            if (ValorRandom >= ValorNecesarioParaSubir && Subio == false)
             {
-                obstaclePrefab.transform.position = new Vector3(transform.position.x, transform.position.y + CantidadParaSubir, transform.position.z);
+                obstaclePrefab.transform.position = new Vector3(transform.position.x, transform.position.y + CantidadASubir, transform.position.z);
 
                 Subio = true;
 
             }
+
+
+
+
+
 
         }
 
