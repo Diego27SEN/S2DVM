@@ -1,56 +1,45 @@
 using UnityEngine;
 
-public class ObstacleEnemy : MonoBehaviour
+public class Obstacle : MonoBehaviour
 {
-    public GameObject obstaclePrefab;
-    public BoxCollider Collider;
+    public GameObject Prefabobstacle;
+    public BoxCollider obstacleCollider;
+    public int RiseValue;
+    public int GetDownValue;
+    public bool isRising = false;
 
-
-    public int ValorNecesarioParaSubir = 5;
-
-    public int CantidadASubir;
-
-    public bool Subio;
-
-
-
-
+    //Ibas a implementar un mecanismo de cuando se eleva se quede por un rato y luego vuelva a su posicion inicial  
+    public float counter;
+    public float TimegetDown = 4;
 
     void Start()
     {
 
     }
-
     void Update()
     {
-
+        ObstacleMechanics();
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Enemy"))
         {
-            Debug.Log("Player ha entrado en el trigger");
-
-            int ValorRandom = Random.Range(0, 11);
-
-            Debug.Log(ValorRandom);
-
-
-
-
-            if (ValorRandom >= ValorNecesarioParaSubir && Subio == false)
+            gameObject.transform.position = new Vector3(transform.position.x, transform.position.y + RiseValue, transform.position.z);
+            isRising = true;
+        }
+    }
+    public void ObstacleMechanics()
+    {
+        if (isRising)
+        {
+            counter += Time.deltaTime;
+            if (counter >= TimegetDown)
             {
-                obstaclePrefab.transform.position = new Vector3(transform.position.x, transform.position.y + CantidadASubir, transform.position.z);
-
-                Subio = true;
-
+                Prefabobstacle.transform.position = new Vector3(transform.position.x, transform.position.y + GetDownValue, transform.position.z);
+                counter = 0;
+                isRising = false;
             }
-
-
-
-
-
 
         }
 

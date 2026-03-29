@@ -10,6 +10,7 @@ public class EnemySimpleController : MonoBehaviour
     {
         agentEnemy = GetComponent<NavMeshAgent>();
         Target = GameObject.FindGameObjectWithTag("Humanoid").transform;
+      
     }
 
     // Update is called once per frame
@@ -43,3 +44,4 @@ public class EnemySimpleController : MonoBehaviour
 
     }
 }
+
