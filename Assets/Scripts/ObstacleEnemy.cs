@@ -1,47 +1,50 @@
 using UnityEngine;
 
-public class Obstacle : MonoBehaviour
+public class ObstacleEnemy : MonoBehaviour
 {
     public GameObject Prefabobstacle;
     public BoxCollider obstacleCollider;
-    public int RiseValue;
-    public int GetDownValue;
-    public bool isRising = false;
 
-    //Ibas a implementar un mecanismo de cuando se eleva se quede por un rato y luego vuelva a su posicion inicial  
-    public float counter;
-    public float TimegetDown = 4;
+    public float riseHeight = 3f;
+    public float timeUp = 3f;
+    public float timeDown = 3f;
+
+    private Vector3 initialPosition;
+    private Vector3 upPosition;
+
+    private float timer;
+    private bool goingUp = true;
 
     void Start()
     {
-
+        initialPosition = transform.position;
+        upPosition = initialPosition + Vector3.up * riseHeight;
     }
+
     void Update()
     {
-        ObstacleMechanics();
-    }
+        timer += Time.deltaTime;
 
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Enemy"))
+        if (goingUp)
         {
-            gameObject.transform.position = new Vector3(transform.position.x, transform.position.y + RiseValue, transform.position.z);
-            isRising = true;
-        }
-    }
-    public void ObstacleMechanics()
-    {
-        if (isRising)
-        {
-            counter += Time.deltaTime;
-            if (counter >= TimegetDown)
+            transform.position = upPosition;
+
+            if (timer >= timeUp)
             {
-                Prefabobstacle.transform.position = new Vector3(transform.position.x, transform.position.y + GetDownValue, transform.position.z);
-                counter = 0;
-                isRising = false;
+                timer = 0;
+                goingUp = false;
             }
-
         }
+        else
+        {
+            transform.position = initialPosition;
 
+            if (timer >= timeDown)
+            {
+                timer = 0;
+                goingUp = true;
+            }
+        }
     }
 }
+
