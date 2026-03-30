@@ -19,7 +19,7 @@ public class AgentSimpleController : MonoBehaviour
         {
             agent.SetDestination(Target.position);
 
-            agent.speed = Random.Range(3f, 6f);
+            agent.speed = Random.Range(4f, 8f);
             agent.acceleration = Random.Range(5f, 10f);
             agent.stoppingDistance = Random.Range(1f, 3f);
             agent.avoidancePriority = Random.Range(0, 99);

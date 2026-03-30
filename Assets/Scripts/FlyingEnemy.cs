@@ -19,7 +19,7 @@ public class Flyingenemy : MonoBehaviour
         {
             agentEnemy.SetDestination(Target.position);
 
-            agentEnemy.speed = Random.Range(3f, 6f);
+            agentEnemy.speed = Random.Range(2f, 4f);
             agentEnemy.acceleration = Random.Range(5f, 10f);
             agentEnemy.stoppingDistance = Random.Range(1f, 3f);
             agentEnemy.avoidancePriority = Random.Range(0, 99);
