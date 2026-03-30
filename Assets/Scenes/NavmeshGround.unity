@@ -3923,6 +3923,7 @@ GameObject:
   - component: {fileID: 522705608}
   - component: {fileID: 522705607}
   - component: {fileID: 522705606}
+  - component: {fileID: 522705613}
   m_Layer: 0
   m_Name: EspecialEnemy (2)
   m_TagString: Untagged
@@ -4088,6 +4089,20 @@ Transform:
   - {fileID: 836005833}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &522705613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522705605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83bb6aaafb2105744a1cca45dc7cffe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JumpIng
+  jumpHeight: 2
+  jumpDuration: 0.5
 --- !u!1001 &527824645
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4711,6 +4726,7 @@ GameObject:
   - component: {fileID: 617645526}
   - component: {fileID: 617645525}
   - component: {fileID: 617645524}
+  - component: {fileID: 617645531}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: Untagged
@@ -4876,6 +4892,20 @@ Transform:
   - {fileID: 1368941459}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &617645531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617645523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83bb6aaafb2105744a1cca45dc7cffe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JumpIng
+  jumpHeight: 2
+  jumpDuration: 0.5
 --- !u!4 &626526013 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b4db9b844dec60a4b84608919736df0c, type: 3}
@@ -5561,6 +5591,7 @@ GameObject:
   - component: {fileID: 690586971}
   - component: {fileID: 690586970}
   - component: {fileID: 690586969}
+  - component: {fileID: 690586976}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Untagged
@@ -5726,6 +5757,20 @@ Transform:
   - {fileID: 1815039346}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &690586976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690586968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83bb6aaafb2105744a1cca45dc7cffe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JumpIng
+  jumpHeight: 2
+  jumpDuration: 0.5
 --- !u!1001 &691016617
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6009,7 +6054,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -7545,6 +7590,7 @@ GameObject:
   - component: {fileID: 876493895}
   - component: {fileID: 876493901}
   - component: {fileID: 876493900}
+  - component: {fileID: 876493902}
   m_Layer: 0
   m_Name: Humanoid
   m_TagString: Humanoid
@@ -7710,6 +7756,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &876493902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876493894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83bb6aaafb2105744a1cca45dc7cffe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JumpIng
+  jumpHeight: 2
+  jumpDuration: 0.5
 --- !u!1 &885408312
 GameObject:
   m_ObjectHideFlags: 0
@@ -8222,7 +8282,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -12092,6 +12152,7 @@ GameObject:
   - component: {fileID: 1446002894}
   - component: {fileID: 1446002893}
   - component: {fileID: 1446002892}
+  - component: {fileID: 1446002899}
   m_Layer: 0
   m_Name: Enemy3
   m_TagString: Untagged
@@ -12257,6 +12318,20 @@ Transform:
   - {fileID: 733159927}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1446002899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446002891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83bb6aaafb2105744a1cca45dc7cffe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JumpIng
+  jumpHeight: 2
+  jumpDuration: 0.5
 --- !u!1001 &1447627130
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13047,7 +13122,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -14748,6 +14823,7 @@ GameObject:
   - component: {fileID: 1767443826}
   - component: {fileID: 1767443825}
   - component: {fileID: 1767443824}
+  - component: {fileID: 1767443831}
   m_Layer: 0
   m_Name: EspecialEnemy
   m_TagString: Untagged
@@ -14913,6 +14989,20 @@ Transform:
   - {fileID: 363186868}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1767443831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767443823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83bb6aaafb2105744a1cca45dc7cffe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JumpIng
+  jumpHeight: 2
+  jumpDuration: 0.5
 --- !u!1001 &1771713550
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17262,6 +17352,7 @@ GameObject:
   - component: {fileID: 1953861500}
   - component: {fileID: 1953861499}
   - component: {fileID: 1953861498}
+  - component: {fileID: 1953861505}
   m_Layer: 0
   m_Name: EspecialEnemy (1)
   m_TagString: Untagged
@@ -17427,6 +17518,20 @@ Transform:
   - {fileID: 1625430703}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1953861505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953861497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83bb6aaafb2105744a1cca45dc7cffe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JumpIng
+  jumpHeight: 2
+  jumpDuration: 0.5
 --- !u!4 &1956942707 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3e41e176ac9f61b44b161c290c82fe05, type: 3}
